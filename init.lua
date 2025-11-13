@@ -71,3 +71,12 @@ vim.lsp.enable("luals")
 -- require('lspconfig')['lua-language-server'].setup({
 -- capabilities = capabilities
 -- })
+
+
+-- Key Mappings:
+
+vim.g.mapleader = " "
+
+local tbuiltin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', tbuiltin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fb', tbuiltin.buffers, { desc = 'Telescope buffers' })
